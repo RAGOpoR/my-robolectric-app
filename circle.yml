@@ -18,7 +18,7 @@ dependencies:
 test:
     override:
         - (./gradlew test):
+            timeout: 360
         post:
         - mkdir -p $CIRCLE_TEST_REPORTS/junit/
         - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-            timeout: 360
