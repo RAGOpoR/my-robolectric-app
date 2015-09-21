@@ -60,7 +60,7 @@ dependencies {
     //Using the appcompat library is not necessary when the minsdk >= 14
     //compile 'com.android.support:appcompat-v7:+'
 
-    compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.android.support:support-v4:23.0.0'
 
     //for more information on the Butterknife injection framework
     //visit https://github.com/JakeWharton/butterknife
