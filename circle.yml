@@ -7,7 +7,7 @@ machine:
     java:
         version: openjdk7
     environment:
-        ANDROID_HOME: /home/ubuntu/android
+        ANDROID_HOME: /usr/local/android-sdk-linux
         JAVA_OPTS: "-Xmx2048m -XX:MaxPermSize=1024m"
 
 dependencies:
