@@ -60,7 +60,7 @@ dependencies {
     //Using the appcompat library is not necessary when the minsdk >= 14
     //compile 'com.android.support:appcompat-v7:+'
 
-    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.android.support:support-v4:23.0.1'
 
     //for more information on the Butterknife injection framework
     //visit https://github.com/JakeWharton/butterknife
@@ -87,37 +87,37 @@ android.testOptions.unitTests.all {
     maxHeapSize = "2048m"
 }
 
-apply plugin: 'jacoco'
-
-jacoco {
-    toolVersion = "0.7.1.201405082137"
-}
-
-def coverageSourceDirs = [
-        '../app/src/main/java'
-]
-
-task jacocoTestReport(type: JacocoReport, dependsOn: "testDebug") {
-    group = "Reporting"
-
-    description = "Generate Jacoco coverage reports"
-
-    classDirectories = fileTree(
-            dir: '../app/build/intermediates/classes/debug',
-            excludes: ['**/R.class',
-                       '**/R$*.class',
-                       '**/*$ViewInjector*.*',
-                       '**/BuildConfig.*',
-                       '**/Manifest*.*']
-    )
-
-    additionalSourceDirs = files(coverageSourceDirs)
-    sourceDirectories = files(coverageSourceDirs)
-    executionData = files('../app/build/jacoco/testDebug.exec')
-
-    reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-
-}
+//apply plugin: 'jacoco'
+//
+//jacoco {
+//    toolVersion = "0.7.1.201405082137"
+//}
+//
+//def coverageSourceDirs = [
+//        '../app/src/main/java'
+//]
+//
+//task jacocoTestReport(type: JacocoReport, dependsOn: "testDebug") {
+//    group = "Reporting"
+//
+//    description = "Generate Jacoco coverage reports"
+//
+//    classDirectories = fileTree(
+//            dir: '../app/build/intermediates/classes/debug',
+//            excludes: ['**/R.class',
+//                       '**/R$*.class',
+//                       '**/*$ViewInjector*.*',
+//                       '**/BuildConfig.*',
+//                       '**/Manifest*.*']
+//    )
+//
+//    additionalSourceDirs = files(coverageSourceDirs)
+//    sourceDirectories = files(coverageSourceDirs)
+//    executionData = files('../app/build/jacoco/testDebug.exec')
+//
+//    reports {
+//        xml.enabled = true
+//        html.enabled = true
+//    }
+//
+//}
